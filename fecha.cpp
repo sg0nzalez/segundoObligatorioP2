@@ -86,13 +86,50 @@ boolean fecha_pertenece_al_rango(fecha fecha_pertenece, fecha fecha_inicial, fec
 
     boolean pertenece = FALSE;
 
-    if(fecha_pertenece.anio >= fecha_inicial.anio && fecha_pertenece.anio <= fecha_fin.anio){
-        if(fecha_pertenece.mes >= fecha_inicial.mes && fecha_pertenece.mes <= fecha_fin.mes){
-            if(fecha_pertenece.dia >= fecha_inicial.dia && fecha_pertenece.dia <= fecha_fin.dia){
+    if(fecha_pertenece.anio > fecha_inicial.anio && fecha_pertenece.anio < fecha_fin.anio){
+
+        pertenece = TRUE;
+    } else {
+        if(fecha_pertenece.anio == fecha_inicial.anio){
+            if(fecha_pertenece.mes > fecha_inicial.mes){
+
                 pertenece = TRUE;
+            } else {
+                if(fecha_pertenece.mes == fecha_inicial.mes){
+                    if(fecha_pertenece.dia >= fecha_inicial.dia){
+                        pertenece = TRUE;
+                    }
+                }
+            }
+        } else {
+            if(fecha_pertenece.anio == fecha_fin.anio){
+                if(fecha_pertenece.mes < fecha_fin.mes){
+
+                    pertenece = TRUE;
+                } else {
+                    if(fecha_pertenece.mes == fecha_fin.mes){
+                        if(fecha_pertenece.dia <= fecha_inicial.dia){
+
+                            pertenece = TRUE;
+                        }
+                    }
+                }
             }
         }
     }
 
     return pertenece;
+}
+
+//Devuelve TRUE si el primero es mayor que el segundo
+boolean fecha_es_mayor(fecha fecha_info, fecha fecha_despues){
+    boolean es_mayor = FALSE;
+
+    if(fecha_info.anio >= fecha_despues.anio){
+        if(fecha_info.mes >= fecha_despues.mes){
+            if(fecha_info.dia >= fecha_despues.dia){
+                es_mayor = TRUE;
+            }
+        }
+    }
 }

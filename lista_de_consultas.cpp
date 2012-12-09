@@ -63,3 +63,15 @@ void consultas_por_evaluacion(lista_de_consultas lista, evaluacion evaluacion_a_
        consultas_por_evaluacion(lista->sig, evaluacion_a_buscar);
    }
 }
+
+int contar_consultas_despues_de_fecha(lista_de_consultas lista, fecha fecha_despues){
+    int contador = 0;
+
+//    if (lista != NULL){
+//        if(fecha_pertenece_al_rango(lista->info.realizacion, fecha_inicio, fecha_fin)==TRUE){
+//            mostrar_consulta(lista->info);
+//        }
+//        lista = lista->sig;
+//        mostrar_consultas_entre_2_fechas(lista, fecha_inicio, fecha_fin);
+//    }
+}
