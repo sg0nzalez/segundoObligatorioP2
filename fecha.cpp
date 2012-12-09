@@ -125,11 +125,24 @@ boolean fecha_pertenece_al_rango(fecha fecha_pertenece, fecha fecha_inicial, fec
 boolean fecha_es_mayor(fecha fecha_info, fecha fecha_despues){
     boolean es_mayor = FALSE;
 
-    if(fecha_info.anio >= fecha_despues.anio){
-        if(fecha_info.mes >= fecha_despues.mes){
-            if(fecha_info.dia >= fecha_despues.dia){
+    if(fecha_info.anio > fecha_despues.anio){
+
+        es_mayor = TRUE;
+    } else {
+        if(fecha_info.anio == fecha_despues.anio){
+            if(fecha_info.mes > fecha_despues.mes){
+
                 es_mayor = TRUE;
+            } else {
+                if(fecha_info.mes == fecha_despues.mes){
+                    if(fecha_info.dia > fecha_despues.dia){
+                        es_mayor = TRUE;
+                    }
+                }
             }
         }
     }
+
+    return es_mayor;
 }
+

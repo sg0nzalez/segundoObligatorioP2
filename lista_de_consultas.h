@@ -28,4 +28,6 @@ void mostrar_consultas_entre_2_fechas(lista_de_consultas lista, fecha fecha_inic
 
 void consultas_por_evaluacion(lista_de_consultas lista, evaluacion evaluacion_a_buscar);
 
+int contar_consultas_despues_de_fecha(lista_de_consultas lista, fecha fecha_despues);
+
 #endif // LISTA_DE_CONSULTAS_H_INCLUDED

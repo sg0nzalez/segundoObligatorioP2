@@ -37,16 +37,17 @@ int main()
     fecha fec_pertenece;
     fecha fec_inicio;
     fecha fec_fin;
+    fecha fec_despues;
 
 //   printf("Ingrese la fecha a buscar: \n");
 //    cargar_fecha(fec_pertenece);
-
+/*
     printf("Ingrese la fecha de inicio: \n");
     cargar_fecha(fec_inicio);
 
     printf("Ingrese la fecha de fin: \n");
     cargar_fecha(fec_fin);
-/*
+
     boolean pertenece = fecha_pertenece_al_rango(fec_pertenece, fec_inicio, fec_fin);
 
     if(pertenece){
@@ -56,6 +57,7 @@ int main()
     }
  */
 
+/*
     printf("\nConsultas realizadas en el periodo ");
     printf("del ");
     mostrar_fecha(fec_inicio);
@@ -63,5 +65,12 @@ int main()
     mostrar_fecha(fec_fin);
     printf("\n\n");
     mostrar_consultas_entre_2_fechas(lista_consultas, fec_inicio, fec_fin);
+*/
+
+printf("Ingrese la fecha para contar las consultas posteriores a la misma: \n");
+cargar_fecha(fec_despues);
+int contador_consultas;
+contador_consultas = contar_consultas_despues_de_fecha(lista_consultas, fec_despues);
+printf("Cantidad de consultas = %d", contador_consultas);
 
 }

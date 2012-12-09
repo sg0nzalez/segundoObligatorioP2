@@ -22,4 +22,5 @@ boolean fecha_valida(fecha fec);
 
 boolean fecha_pertenece_al_rango(fecha fecha_pertenece, fecha inicial, fecha fin);
 
+boolean fecha_es_mayor(fecha fecha_info, fecha fecha_despues);
 #endif // FECHA_H_INCLUDED

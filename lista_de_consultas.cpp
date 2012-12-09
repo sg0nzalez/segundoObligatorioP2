@@ -65,13 +65,15 @@ void consultas_por_evaluacion(lista_de_consultas lista, evaluacion evaluacion_a_
 }
 
 int contar_consultas_despues_de_fecha(lista_de_consultas lista, fecha fecha_despues){
-    int contador = 0;
 
-//    if (lista != NULL){
-//        if(fecha_pertenece_al_rango(lista->info.realizacion, fecha_inicio, fecha_fin)==TRUE){
-//            mostrar_consulta(lista->info);
-//        }
-//        lista = lista->sig;
-//        mostrar_consultas_entre_2_fechas(lista, fecha_inicio, fecha_fin);
-//    }
+    if(lista == NULL){
+        return 0;
+    }
+    else {
+        if(fecha_es_mayor(lista->info.realizacion, fecha_despues)==TRUE){
+            return 1 + contar_consultas_despues_de_fecha(lista->sig, fecha_despues);
+        }
+
+        return contar_consultas_despues_de_fecha(lista->sig, fecha_despues);
+    }
 }
