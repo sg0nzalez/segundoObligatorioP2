@@ -33,26 +33,35 @@ int main()
 
     printf("Consultas por evaluacion: \n");
     consultas_por_evaluacion(lista_consultas, SALUDABLE);
-/*
+
     fecha fec_pertenece;
     fecha fec_inicio;
     fecha fec_fin;
 
-    printf("Ingrese la fecha a buscar: \n");
-    cargar_fecha(fec_pertenece);
+//   printf("Ingrese la fecha a buscar: \n");
+//    cargar_fecha(fec_pertenece);
 
     printf("Ingrese la fecha de inicio: \n");
     cargar_fecha(fec_inicio);
 
     printf("Ingrese la fecha de fin: \n");
     cargar_fecha(fec_fin);
-
+/*
     boolean pertenece = fecha_pertenece_al_rango(fec_pertenece, fec_inicio, fec_fin);
 
-    if(pertenece==TRUE){
+    if(pertenece){
         printf("PERTENECE");
     } else {
         printf("NO PERTENECE");
     }
-*/
+ */
+
+    printf("\nConsultas realizadas en el periodo ");
+    printf("del ");
+    mostrar_fecha(fec_inicio);
+    printf(" al ");
+    mostrar_fecha(fec_fin);
+    printf("\n\n");
+    mostrar_consultas_entre_2_fechas(lista_consultas, fec_inicio, fec_fin);
+
 }

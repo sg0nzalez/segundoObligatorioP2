@@ -45,7 +45,8 @@ void mostrar_consultas_entre_2_fechas(lista_de_consultas lista, fecha fecha_inic
         if(fecha_pertenece_al_rango(lista->info.realizacion, fecha_inicio, fecha_fin)==TRUE){
             mostrar_consulta(lista->info);
         }
-        lista_mostrar_consultas(lista->sig);
+        lista = lista->sig;
+        mostrar_consultas_entre_2_fechas(lista, fecha_inicio, fecha_fin);
     }
 }
 

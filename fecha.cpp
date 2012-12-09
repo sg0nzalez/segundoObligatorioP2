@@ -93,4 +93,6 @@ boolean fecha_pertenece_al_rango(fecha fecha_pertenece, fecha fecha_inicial, fec
             }
         }
     }
+
+    return pertenece;
 }
