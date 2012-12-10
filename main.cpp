@@ -5,7 +5,7 @@ int main()
 {
     abb_de_pacientes abb_pacientes = NULL;
 
-    for(int i = 0; i < 4; i++)
+    for(int i = 0; i < 1; i++)
     {
         paciente nuevo_paciente;
 
@@ -16,10 +16,10 @@ int main()
 
     printf("Mostrar todos los pacientes ordenados: \n\n");
     abb_mostrar_pacientes(abb_pacientes);
-/*
+
     lista_de_consultas lista_consultas = NULL;
 
-    for(int i = 0; i < 2; i++)
+    for(int i = 0; i < 3; i++)
     {
         consulta nueva_consulta;
 
@@ -28,6 +28,16 @@ int main()
         lista_insertar_consulta(lista_consultas, nueva_consulta);
     }
 
+    printf("%ld", cedula_paciente_con_mas_consultas(lista_consultas));
+
+    long cedula;
+
+    printf("Ingrese una cedula para mostrar las consultas: ");
+    scanf("%ld", &cedula);
+
+    consultas_por_cedula(lista_consultas, cedula);
+
+/*
     printf("Mostrar todas las consultas: \n\n");
     lista_mostrar_consultas(lista_consultas);
 
@@ -72,7 +82,7 @@ cargar_fecha(fec_despues);
 int contador_consultas;
 contador_consultas = contar_consultas_despues_de_fecha(lista_consultas, fec_despues);
 printf("Cantidad de consultas = %d", contador_consultas);
-*/
+
 paciente paciente_menor_cedula;
 paciente paciente_mayor_cedula;
 
@@ -81,5 +91,5 @@ paciente_menor_y_mayor_cedula(abb_pacientes, paciente_menor_cedula, paciente_may
 printf("\nPaciente menor cedula:\n");
 mostrar_paciente(paciente_menor_cedula);
 printf("\nPaciente mayor cedula:\n");
-mostrar_paciente(paciente_mayor_cedula);
+mostrar_paciente(paciente_mayor_cedula);*/
 }

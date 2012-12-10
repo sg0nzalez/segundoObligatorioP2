@@ -36,4 +36,6 @@ int cantidad_consultas_por_cedula(lista_de_consultas lista, long cedula);
 
 int cantidad_consultas_por_evaluacion(lista_de_consultas lista, evaluacion evaluacion_a_buscar);
 
+long cedula_paciente_con_mas_consultas(lista_de_consultas lista);
+
 #endif // LISTA_DE_CONSULTAS_H_INCLUDED

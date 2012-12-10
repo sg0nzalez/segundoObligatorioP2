@@ -91,22 +91,22 @@ void consultas_por_cedula(lista_de_consultas lista, long cedula)
        consultas_por_cedula(lista->sig, cedula);
    }
 }
-/*
+
 int cantidad_consultas_por_cedula(lista_de_consultas lista, long cedula)
 {
    if (lista != NULL)
    {
-       if (dar_evaluacion(lista->info) == evaluacion_a_buscar)
+       if (dar_evaluacion(lista->info) == cedula)
        {
-           return 1 + cantidad_consultas_por_evaluacion(lista->sig, evaluacion_a_buscar);
+           return 1 + cantidad_consultas_por_cedula(lista->sig, cedula);
        }
 
-       return cantidad_consultas_por_evaluacion(lista->sig, evaluacion_a_buscar);
+       return cantidad_consultas_por_cedula(lista->sig, cedula);
    }
 
    return 0;
 }
-*/
+
 int cantidad_consultas_por_evaluacion(lista_de_consultas lista, evaluacion evaluacion_a_buscar)
 {
    if (lista != NULL)
@@ -120,4 +120,25 @@ int cantidad_consultas_por_evaluacion(lista_de_consultas lista, evaluacion evalu
    }
 
    return 0;
+}
+
+long cedula_paciente_con_mas_consultas(lista_de_consultas lista)
+{
+    lista_de_consultas lista_aux = lista;
+
+    int cantidad_consultas_max = cantidad_consultas_por_cedula(lista, dar_cedula(lista_aux->info));
+    long cedula_con_mas_consultas = dar_cedula(lista_aux->info);
+
+    while (lista_aux != NULL)
+    {
+        if (cantidad_consultas_por_cedula(lista, dar_cedula(lista_aux->info)) > cedula_con_mas_consultas)
+        {
+            cantidad_consultas_max = cantidad_consultas_por_cedula(lista, dar_cedula(lista_aux->info));
+            cedula_con_mas_consultas = dar_cedula(lista_aux->info);
+        }
+
+        lista_aux = lista_aux->sig;
+    }
+
+    return cedula_con_mas_consultas;
 }

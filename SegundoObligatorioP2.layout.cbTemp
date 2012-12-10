@@ -34,8 +34,8 @@
 	<File name="lista_de_consultas.h" open="0" top="0" tabpos="8">
 		<Cursor position="757" topLine="0" />
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="805" topLine="23" />
+	<File name="main.cpp" open="1" top="1" tabpos="6">
+		<Cursor position="795" topLine="23" />
 	</File>
 	<File name="paciente.cpp" open="1" top="0" tabpos="3">
 		<Cursor position="648" topLine="18" />
@@ -43,10 +43,10 @@
 	<File name="paciente.h" open="0" top="0" tabpos="4">
 		<Cursor position="58" topLine="0" />
 	</File>
-	<File name="string.cpp" open="1" top="1" tabpos="8">
+	<File name="string.cpp" open="0" top="0" tabpos="8">
 		<Cursor position="189" topLine="0" />
 	</File>
-	<File name="string.h" open="1" top="0" tabpos="7">
-		<Cursor position="90" topLine="0" />
+	<File name="string.h" open="0" top="0" tabpos="5">
+		<Cursor position="173" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

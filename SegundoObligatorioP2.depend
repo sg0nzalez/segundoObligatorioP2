@@ -151,3 +151,55 @@
 1348843534 source:/home/santi/workspace/secondObligatorioP2/boolean.cpp
 	"boolean.h"
 
+1355134435 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/string.cpp
+	"string.h"
+
+1355181391 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/string.h
+	"boolean.h"
+
+1355134435 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/boolean.h
+	<stdio.h>
+
+1355134435 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/consulta.cpp
+	"consulta.h"
+
+1355134435 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/consulta.h
+	"evaluacion.h"
+	"fecha.h"
+	"string.h"
+
+1355134435 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/evaluacion.h
+
+1355134435 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/fecha.h
+	<stdio.h>
+	"boolean.h"
+
+1355134435 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/evaluacion.cpp
+	<stdio.h>
+	"evaluacion.h"
+
+1355134435 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/fecha.cpp
+	"fecha.h"
+
+1355181652 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/lista_de_consultas.cpp
+	"lista_de_consultas.h"
+
+1355181528 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/lista_de_consultas.h
+	"consulta.h"
+
+1355135638 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/main.cpp
+	"abb_de_pacientes.h"
+	"lista_de_consultas.h"
+
+1355180274 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/abb_de_pacientes.h
+	"paciente.h"
+
+1355134435 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/paciente.h
+	"string.h"
+
+1355134435 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/paciente.cpp
+	"paciente.h"
+
+1355180284 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/abb_de_pacientes.cpp
+	"abb_de_pacientes.h"
+
