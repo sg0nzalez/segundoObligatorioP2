@@ -91,7 +91,7 @@ void consultas_por_cedula(lista_de_consultas lista, long cedula)
        consultas_por_cedula(lista->sig, cedula);
    }
 }
-
+/*
 int cantidad_consultas_por_cedula(lista_de_consultas lista, long cedula)
 {
    if (lista != NULL)
@@ -106,7 +106,7 @@ int cantidad_consultas_por_cedula(lista_de_consultas lista, long cedula)
 
    return 0;
 }
-
+*/
 int cantidad_consultas_por_evaluacion(lista_de_consultas lista, evaluacion evaluacion_a_buscar)
 {
    if (lista != NULL)

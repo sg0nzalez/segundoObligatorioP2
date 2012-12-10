@@ -5,6 +5,10 @@ long darCedula(paciente info)
     return info.cedula;
 }
 
+void dar_apellido(paciente info, string &apellido) {
+    copiar_string(apellido, info.apellido);
+}
+
 void ingresar_paciente(paciente &nuevo_paciente)
 {
     printf("Ingrese un nuevo paciente:\n");

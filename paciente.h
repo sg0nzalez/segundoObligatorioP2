@@ -13,6 +13,8 @@ typedef struct {
 
 long darCedula(paciente info);
 
+void dar_apellido(paciente info, string &apellido);
+
 void ingresar_paciente(paciente &nuevo_paciente);
 
 void mostrar_paciente(paciente paciente_a_mostrar);
