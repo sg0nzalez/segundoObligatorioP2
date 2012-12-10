@@ -105,7 +105,7 @@
 1355114983 /home/santi/workspace/secondObligatorioP2/paciente.h
 	"string.h"
 
-1354230950 /home/santi/workspace/secondObligatorioP2/string.h
+1355119228 /home/santi/workspace/secondObligatorioP2/string.h
 	"boolean.h"
 
 1354230810 /home/santi/workspace/secondObligatorioP2/boolean.h
@@ -135,10 +135,10 @@
 	"abb_de_pacientes.h"
 	"lista_de_consultas.h"
 
-1355105491 source:/home/santi/workspace/secondObligatorioP2/paciente.cpp
+1355119167 source:/home/santi/workspace/secondObligatorioP2/paciente.cpp
 	"paciente.h"
 
-1349393640 source:/home/santi/workspace/secondObligatorioP2/string.cpp
+1355119059 source:/home/santi/workspace/secondObligatorioP2/string.cpp
 	"string.h"
 
 1355091360 /home/santi/workspace/secondObligatorioP2/fecha.h

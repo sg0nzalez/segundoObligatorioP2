@@ -6,8 +6,8 @@
 // String
 
 const int LARGO_STRING = 80;
-
-typedef char string[LARGO_STRING];
+typedef char *string;
+//typedef char string[LARGO_STRING];
 
 // Metodos
 
@@ -18,7 +18,15 @@ void cargar_string(string &texto);
 void desplegar_string(string texto);
 
 //Copia un string en otro
-void copiar_string(string texto, string &texto2);
+//void copiar_string(string texto, string &texto2);
+
+void copiar_string(string &s1, string s2);
+
+void crear_string(string & s);
+
+void destruir_string(string &s);
+
+int largo_string(string s);
 
 //Comparar dos strings si son iguales
 boolean comparar_2_strings(string s1,string s2);

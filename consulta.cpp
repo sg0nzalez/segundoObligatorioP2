@@ -10,6 +10,7 @@ void ingresar_consulta(consulta &nueva_consulta)
     getchar();
 
     printf("Descripcion: ");
+    crear_string(nueva_consulta.descripcion);
     cargar_string(nueva_consulta.descripcion);
 
     printf("Cedula Paciente: ");
