@@ -30,4 +30,6 @@ void consultas_por_evaluacion(lista_de_consultas lista, evaluacion evaluacion_a_
 
 int contar_consultas_despues_de_fecha(lista_de_consultas lista, fecha fecha_despues);
 
+
+
 #endif // LISTA_DE_CONSULTAS_H_INCLUDED

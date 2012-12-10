@@ -83,3 +83,19 @@ boolean abb_existe_paciente(abb_de_pacientes arbol, long cedula)
 
     return FALSE;
 }
+
+void paciente_menor_y_mayor_cedula(abb_de_pacientes arbol, paciente &paciente_menor_cedula, paciente &paciente_mayor_cedula){
+
+    abb_de_pacientes arbol_aux = arbol;
+
+    while(arbol != NULL)
+    {
+        paciente_menor_cedula = arbol->info;
+        arbol = arbol->hIzq;
+    }
+    while(arbol_aux != NULL)
+    {
+        paciente_mayor_cedula = arbol_aux->info;
+        arbol_aux = arbol_aux->hDer;
+    }
+}

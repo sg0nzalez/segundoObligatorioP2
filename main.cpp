@@ -5,7 +5,7 @@ int main()
 {
     abb_de_pacientes abb_pacientes = NULL;
 
-    /**for(int i = 0; i < 2; i++)
+    for(int i = 0; i < 4; i++)
     {
         paciente nuevo_paciente;
 
@@ -15,8 +15,8 @@ int main()
     }
 
     printf("Mostrar todos los pacientes ordenados: \n\n");
-    abb_mostrar_pacientes(abb_pacientes);**/
-
+    abb_mostrar_pacientes(abb_pacientes);
+/*
     lista_de_consultas lista_consultas = NULL;
 
     for(int i = 0; i < 2; i++)
@@ -38,7 +38,7 @@ int main()
     fecha fec_inicio;
     fecha fec_fin;
     fecha fec_despues;
-
+*/
 //   printf("Ingrese la fecha a buscar: \n");
 //    cargar_fecha(fec_pertenece);
 /*
@@ -66,11 +66,20 @@ int main()
     printf("\n\n");
     mostrar_consultas_entre_2_fechas(lista_consultas, fec_inicio, fec_fin);
 */
-
+/*
 printf("Ingrese la fecha para contar las consultas posteriores a la misma: \n");
 cargar_fecha(fec_despues);
 int contador_consultas;
 contador_consultas = contar_consultas_despues_de_fecha(lista_consultas, fec_despues);
 printf("Cantidad de consultas = %d", contador_consultas);
+*/
+paciente paciente_menor_cedula;
+paciente paciente_mayor_cedula;
 
+paciente_menor_y_mayor_cedula(abb_pacientes, paciente_menor_cedula, paciente_mayor_cedula);
+
+printf("\nPaciente menor cedula:\n");
+mostrar_paciente(paciente_menor_cedula);
+printf("\nPaciente mayor cedula:\n");
+mostrar_paciente(paciente_mayor_cedula);
 }

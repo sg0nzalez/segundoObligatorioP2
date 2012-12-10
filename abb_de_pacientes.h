@@ -33,4 +33,6 @@ boolean abb_es_vacio(abb_de_pacientes arbol);
 // precondicion no es vacio
 boolean abb_existe_paciente(abb_de_pacientes arbol, long cedula);
 
+void paciente_menor_y_mayor_cedula(abb_de_pacientes arbol, paciente &paciente_menor_cedula, paciente &paciente_mayor_cedula);
+
 #endif // ABB_DE_PACIENTES_H_INCLUDED
