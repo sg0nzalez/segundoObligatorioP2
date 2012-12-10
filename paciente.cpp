@@ -19,15 +19,12 @@ void ingresar_paciente(paciente &nuevo_paciente)
     getchar();
 
     printf("Nombre: ");
-    crear_string(nuevo_paciente.nombre);
     cargar_string(nuevo_paciente.nombre);
 
     printf("Apellido: ");
-    crear_string(nuevo_paciente.apellido);
     cargar_string(nuevo_paciente.apellido);
 
     printf("Domicilio: ");
-    crear_string(nuevo_paciente.domicilio);
     cargar_string(nuevo_paciente.domicilio);
 
     printf("Telefono: ");

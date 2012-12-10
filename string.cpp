@@ -1,6 +1,7 @@
 #include "string.h"
 
 void cargar_string(string &s){
+    crear_string(s);
 
     string aux = new char[LARGO_STRING];
     int i=0;
