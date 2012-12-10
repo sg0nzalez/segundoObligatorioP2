@@ -41,4 +41,7 @@ evaluacion dar_evaluacion(consulta c)
    return c.evaluacion_paciente;
 }
 
-
+long dar_cedula(consulta c)
+{
+    return c.cedula_paciente;
+}

@@ -99,3 +99,35 @@ void paciente_menor_y_mayor_cedula(abb_de_pacientes arbol, paciente &paciente_me
         arbol_aux = arbol_aux->hDer;
     }
 }
+
+int cantidad_pacientes_por_apellido(abb_de_pacientes arbol, string apellido)
+{
+    if (arbol == NULL)
+    {
+        return 0;
+    }
+    else
+    {
+        if (comparar_2_strings(dar_apellido(arbol->info), apellido))
+        {
+            return 1 + cantidad_pacientes_por_apellido(arbol->hIzq, apellido) + cantidad_pacientes_por_apellido(arbol->hDer, apellido);
+        }
+
+        return cantidad_pacientes_por_apellido(arbol->hIzq, apellido) + cantidad_pacientes_por_apellido(arbol->hDer, apellido);
+    }
+}
+
+/*long cedula_paciente_con_mas_consultas(abb_de_pacientes arbol, lista_de_consultas consultas)
+{
+    int cantidad_consultas = cantidad_consultas_por_cedula(dar_cedula(arbol->info));
+    long cedula_con_mas_consultas = dar_cedula(arbol->info);
+
+    while (arbol == NULL)
+    {
+        if (cantidad_consultas_por_cedula(consultas, dar_cedula(arbol->info)) > cantidad_consultas)
+        {
+            cantidad_consultas = cantidad_consultas_por_cedula(dar_cedula(arbol->info));
+            cedula_con_mas_consultas = dar_cedula(arbol->info);
+        }
+    }
+}*/

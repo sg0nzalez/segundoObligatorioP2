@@ -35,4 +35,8 @@ boolean abb_existe_paciente(abb_de_pacientes arbol, long cedula);
 
 void paciente_menor_y_mayor_cedula(abb_de_pacientes arbol, paciente &paciente_menor_cedula, paciente &paciente_mayor_cedula);
 
+int cantidad_pacientes_por_apellido(abb_de_pacientes arbol, string apellido);
+
+//long cedula_paciente_con_mas_consultas(abb_de_pacientes arbol);
+
 #endif // ABB_DE_PACIENTES_H_INCLUDED

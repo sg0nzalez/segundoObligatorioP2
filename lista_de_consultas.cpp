@@ -77,3 +77,47 @@ int contar_consultas_despues_de_fecha(lista_de_consultas lista, fecha fecha_desp
         return contar_consultas_despues_de_fecha(lista->sig, fecha_despues);
     }
 }
+
+void consultas_por_cedula(lista_de_consultas lista, long cedula)
+{
+
+   if (lista != NULL)
+   {
+       if (dar_cedula(lista->info) == cedula)
+       {
+           mostrar_consulta(lista->info);
+       }
+
+       consultas_por_cedula(lista->sig, cedula);
+   }
+}
+
+int cantidad_consultas_por_cedula(lista_de_consultas lista, long cedula)
+{
+   if (lista != NULL)
+   {
+       if (dar_evaluacion(lista->info) == evaluacion_a_buscar)
+       {
+           return 1 + cantidad_consultas_por_evaluacion(lista->sig, evaluacion_a_buscar);
+       }
+
+       return cantidad_consultas_por_evaluacion(lista->sig, evaluacion_a_buscar);
+   }
+
+   return 0;
+}
+
+int cantidad_consultas_por_evaluacion(lista_de_consultas lista, evaluacion evaluacion_a_buscar)
+{
+   if (lista != NULL)
+   {
+       if (dar_evaluacion(lista->info) == evaluacion_a_buscar)
+       {
+           return 1 + cantidad_consultas_por_evaluacion(lista->sig, evaluacion_a_buscar);
+       }
+
+       return cantidad_consultas_por_evaluacion(lista->sig, evaluacion_a_buscar);
+   }
+
+   return 0;
+}
