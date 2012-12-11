@@ -34,11 +34,6 @@ boolean lista_es_vacia(lista_de_consultas lista)
     return (boolean)(lista == NULL);
 }
 
-consulta lista_primer_consulta(lista_de_consultas lista)
-{
-    return lista->info;
-}
-
 void mostrar_consultas_entre_2_fechas(lista_de_consultas lista, fecha fecha_inicio, fecha fecha_fin){
 
     if (lista != NULL){
@@ -104,6 +99,11 @@ void consultas_por_cedula(lista_de_consultas lista, long cedula)
    }
 }
 
+consulta lista_primer_consulta(lista_de_consultas lista)
+{
+    return lista->info;
+}
+
 int cantidad_consultas_por_cedula(lista_de_consultas lista, long cedula)
 {
    if (lista != NULL)
@@ -130,9 +130,25 @@ int cantidad_consultas_por_evaluacion(lista_de_consultas lista, evaluacion evalu
 
        return cantidad_consultas_por_evaluacion(lista->sig, evaluacion_a_buscar);
    }
+   return 0;
+}
+
+/*
+int cantidad_consultas_por_cedula(lista_de_consultas lista, long cedula)
+{
+   if (lista != NULL)
+   {
+       if (dar_evaluacion(lista->info) == evaluacion_a_buscar)
+       {
+           return 1 + cantidad_consultas_por_evaluacion(lista->sig, evaluacion_a_buscar);
+       }
+
+       return cantidad_consultas_por_evaluacion(lista->sig, evaluacion_a_buscar);
+   }
 
    return 0;
 }
+*/
 
 long cedula_paciente_con_mas_consultas(lista_de_consultas lista)
 {
