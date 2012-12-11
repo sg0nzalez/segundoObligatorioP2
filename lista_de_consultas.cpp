@@ -50,6 +50,18 @@ void mostrar_consultas_entre_2_fechas(lista_de_consultas lista, fecha fecha_inic
     }
 }
 
+void cantidad_consultas_de_cada_tipo(lista_de_consultas lista)
+{
+    int saludables = cantidad_consultas_por_evaluacion(lista, SALUDABLE);
+    int en_tratamiento = cantidad_consultas_por_evaluacion(lista, EN_TRATAMIENTO);
+    int necesitan_protesis = cantidad_consultas_por_evaluacion(lista, NECESITA_PROTESIS);
+
+    printf("\nCantidad de consultas por tipo: \n");
+    printf("\tSaludables: %d", saludables);
+    printf("\tEn Tratamiento: %d", en_tratamiento);
+    printf("\tNecesitan Protesis: %d\n", necesitan_protesis);
+}
+
 void consultas_por_evaluacion(lista_de_consultas lista, evaluacion evaluacion_a_buscar)
 {
 

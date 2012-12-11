@@ -5,7 +5,7 @@ void cargar_evaluacion(evaluacion &evaluacion_a_cargar)
 {
     int numero;
 
-    printf("\nSaludable: 0, En Tratamiento: 1, Necesita Protesis: 2\n");
+    printf("\n\t(Saludable: 0, En Tratamiento: 1, Necesita Protesis: 2): ");
     scanf("%d", &numero);
 
     evaluacion_a_cargar = evaluacion(numero);

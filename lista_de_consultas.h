@@ -34,6 +34,8 @@ void consultas_por_cedula(lista_de_consultas lista, long cedula);
 
 int cantidad_consultas_por_cedula(lista_de_consultas lista, long cedula);
 
+void cantidad_consultas_de_cada_tipo(lista_de_consultas lista);
+
 int cantidad_consultas_por_evaluacion(lista_de_consultas lista, evaluacion evaluacion_a_buscar);
 
 long cedula_paciente_con_mas_consultas(lista_de_consultas lista);

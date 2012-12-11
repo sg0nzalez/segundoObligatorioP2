@@ -11,41 +11,37 @@ void dar_apellido(paciente info, string &apellido) {
 
 void ingresar_paciente(paciente &nuevo_paciente)
 {
-    printf("Cedula: ");
+    printf("\nIngrese los datos del nuevo paciente:");
+    printf("\n\tCedula: ");
     scanf("%ld", &nuevo_paciente.cedula);
 
     getchar();
 
-    printf("Nombre: ");
+    printf("\tNombre: ");
     cargar_string(nuevo_paciente.nombre);
 
-    printf("Apellido: ");
+    printf("\tApellido: ");
     cargar_string(nuevo_paciente.apellido);
 
-    printf("Domicilio: ");
+    printf("\tDomicilio: ");
     cargar_string(nuevo_paciente.domicilio);
 
-    printf("Telefono: ");
+    printf("\tTelefono: ");
     scanf("%d", &nuevo_paciente.telefono);
 }
 
 void mostrar_paciente(paciente paciente_a_mostrar)
 {
-    printf("\tMostrar paciente:\n");
+    printf("\t[Cedula: %ld | ", paciente_a_mostrar.cedula);
 
-    printf("\tCedula: %ld\n", paciente_a_mostrar.cedula);
-
-    printf("\tNombre: ");
+    printf("Nombre: ");
     desplegar_string(paciente_a_mostrar.nombre);
-    printf("\n");
 
-    printf("\tApellido: ");
+    printf(" | Apellido: ");
     desplegar_string(paciente_a_mostrar.apellido);
-    printf("\n");
 
-    printf("\tDomicilio: ");
+    printf(" | Domicilio: ");
     desplegar_string(paciente_a_mostrar.domicilio);
-    printf("\n");
 
-    printf("\tTelefono: %d \n\n", paciente_a_mostrar.telefono);
+    printf(" | Telefono: %d] \n", paciente_a_mostrar.telefono);
 }

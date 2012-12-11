@@ -4,18 +4,18 @@ void ingresar_consulta(consulta &nueva_consulta)
 {
     printf("Ingrese una nueva consulta:\n");
 
-    printf("Fecha: ");
+    printf("\tFecha: ");
     cargar_fecha(nueva_consulta.realizacion);
 
     getchar();
 
-    printf("Descripcion: ");
+    printf("\tDescripcion: ");
     cargar_string(nueva_consulta.descripcion);
 
-    printf("Cedula Paciente: ");
+    printf("\tCedula Paciente: ");
     scanf("%ld", &nueva_consulta.cedula_paciente);
 
-    printf("Evaluacion: ");
+    printf("\tEvaluacion: ");
     cargar_evaluacion(nueva_consulta.evaluacion_paciente);
 }
 

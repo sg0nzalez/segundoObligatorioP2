@@ -16,10 +16,19 @@ void sub_menu_de_consultas(abb_de_pacientes &abb_pacientes, lista_de_consultas &
     switch (opcion_ingresada)
     {
         case 1:
+        {
+            fecha fecha_a_consultar;
+            cargar_fecha(fecha_a_consultar);
 
+            int cantidad_consultas = contar_consultas_despues_de_fecha(lista_consultas, fecha_a_consultar);
+
+            printf("\nHay %d consultas luego del ", cantidad_consultas);
+            mostrar_fecha(fecha_a_consultar);
+            printf("\n");
             break;
+        }
         case 2:
-
+            cantidad_consultas_de_cada_tipo(lista_consultas);
             break;
         case 3:
             cerrar_menu = TRUE;
@@ -44,7 +53,9 @@ void sub_menu_de_pacientes(abb_de_pacientes &abb_pacientes, lista_de_consultas &
     switch (opcion_ingresada)
     {
         case 1:
+            printf("\nPacientes: \n\n");
 
+            abb_mostrar_pacientes(abb_pacientes);
             break;
         case 2:
 

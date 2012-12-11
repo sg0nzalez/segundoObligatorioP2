@@ -2,19 +2,19 @@
 
 void cargar_fecha(fecha &fec)
 {
-    printf("\n\tIngrese un dia: ");
+    printf("\n\t - Dia: ");
     scanf("%d", &fec.dia);
 
-    printf("\n\tIngrese un mes: ");
+    printf("\t - Mes: ");
     scanf("%d", &fec.mes);
 
-    printf("\n\tIngrese un año: ");
+    printf("\t - Año: ");
     scanf("%d", &fec.anio);
 }
 
 void mostrar_fecha(fecha fec)
 {
-    printf("%d / %d / %d", fec.dia, fec.mes, fec.anio);
+    printf("%d/%d/%d", fec.dia, fec.mes, fec.anio);
 }
 
 int dar_dia(fecha fec)
