@@ -96,10 +96,10 @@
 1354661605 source:/home/santi/workspace/SegundoObligatorioP2/paciente.cpp
 	"paciente.h"
 
-1355115147 source:/home/santi/workspace/secondObligatorioP2/abb_de_pacientes.cpp
+1355190787 source:/home/santi/workspace/secondObligatorioP2/abb_de_pacientes.cpp
 	"abb_de_pacientes.h"
 
-1355114246 /home/santi/workspace/secondObligatorioP2/abb_de_pacientes.h
+1355183383 /home/santi/workspace/secondObligatorioP2/abb_de_pacientes.h
 	"paciente.h"
 
 1355114983 /home/santi/workspace/secondObligatorioP2/paciente.h
@@ -111,7 +111,7 @@
 1354230810 /home/santi/workspace/secondObligatorioP2/boolean.h
 	<stdio.h>
 
-1355119633 source:/home/santi/workspace/secondObligatorioP2/consulta.cpp
+1355190787 source:/home/santi/workspace/secondObligatorioP2/consulta.cpp
 	"consulta.h"
 
 1355114246 /home/santi/workspace/secondObligatorioP2/consulta.h
@@ -121,31 +121,31 @@
 
 1354834169 /home/santi/workspace/secondObligatorioP2/evaluacion.h
 
-1354835437 source:/home/santi/workspace/secondObligatorioP2/evaluacion.cpp
+1355190783 source:/home/santi/workspace/secondObligatorioP2/evaluacion.cpp
 	<stdio.h>
 	"evaluacion.h"
 
 1355115554 source:/home/santi/workspace/secondObligatorioP2/lista_de_consultas.cpp
 	"lista_de_consultas.h"
 
-1355114246 /home/santi/workspace/secondObligatorioP2/lista_de_consultas.h
+1355190783 /home/santi/workspace/secondObligatorioP2/lista_de_consultas.h
 	"consulta.h"
 
-1355108286 source:/home/santi/workspace/secondObligatorioP2/main.cpp
+1355190783 source:/home/santi/workspace/secondObligatorioP2/main.cpp
 	"abb_de_pacientes.h"
 	"lista_de_consultas.h"
 
-1355119587 source:/home/santi/workspace/secondObligatorioP2/paciente.cpp
+1355190783 source:/home/santi/workspace/secondObligatorioP2/paciente.cpp
 	"paciente.h"
 
-1355119059 source:/home/santi/workspace/secondObligatorioP2/string.cpp
+1355120956 source:/home/santi/workspace/secondObligatorioP2/string.cpp
 	"string.h"
 
 1355091360 /home/santi/workspace/secondObligatorioP2/fecha.h
 	<stdio.h>
 	"boolean.h"
 
-1355101820 source:/home/santi/workspace/secondObligatorioP2/fecha.cpp
+1355190783 source:/home/santi/workspace/secondObligatorioP2/fecha.cpp
 	"fecha.h"
 
 1348843534 source:/home/santi/workspace/secondObligatorioP2/boolean.cpp
