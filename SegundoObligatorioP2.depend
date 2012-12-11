@@ -151,7 +151,7 @@
 1348843534 source:/home/santi/workspace/secondObligatorioP2/boolean.cpp
 	"boolean.h"
 
-1355134435 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/string.cpp
+1355192336 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/string.cpp
 	"string.h"
 
 1355181391 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/string.h
@@ -174,7 +174,7 @@
 	<stdio.h>
 	"boolean.h"
 
-1355134435 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/evaluacion.cpp
+1355190429 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/evaluacion.cpp
 	<stdio.h>
 	"evaluacion.h"
 
@@ -187,7 +187,7 @@
 1355189982 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/lista_de_consultas.h
 	"consulta.h"
 
-1355190032 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/main.cpp
+1355192305 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/main.cpp
 	"abb_de_pacientes.h"
 	"lista_de_consultas.h"
 
@@ -200,6 +200,6 @@
 1355189581 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/paciente.cpp
 	"paciente.h"
 
-1355180284 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/abb_de_pacientes.cpp
+1355191412 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/abb_de_pacientes.cpp
 	"abb_de_pacientes.h"
 

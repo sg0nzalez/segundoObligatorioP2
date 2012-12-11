@@ -1,6 +1,7 @@
 #include "string.h"
 
-void cargar_string(string &s){
+void cargar_string(string &s)
+{
     crear_string(s);
 
     string aux = new char[LARGO_STRING];
@@ -8,11 +9,13 @@ void cargar_string(string &s){
     char c;
     scanf("%c",&c);
 
-    while (((c!='\n') && (i<LARGO_STRING))) {
+    while (((c!='\n') && (i<LARGO_STRING)))
+    {
         aux[i]=c;
         i++;
         scanf("%c",&c);
     }
+
     aux[i]='\0';
     copiar_string(s, aux);
     destruir_string(aux);
@@ -46,19 +49,20 @@ void copiar_string(string &s1, string s2)
 int largo_string(string s)
 {
     int i=0;
+
     while (s[i] != '\0')
         i++;
 
     return i;
 }
 
-void crear_string (string & s)
+void crear_string (string &s)
 {
     s = new char[1];
     s[0] = '\0';
 }
 
-void destruir_string (string &s)
+void destruir_string(string &s)
 {
     delete [] s;
     s = NULL;
@@ -74,7 +78,9 @@ boolean comparar_2_strings(string s1,string s2)
         iguales = FALSE;
         i++;
     }
+
     if ((s1[i]!='\0') || (s2[i]!='\0'))
          iguales = FALSE;
+
     return iguales;
 }

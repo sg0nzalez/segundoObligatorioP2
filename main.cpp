@@ -58,8 +58,22 @@ void sub_menu_de_pacientes(abb_de_pacientes &abb_pacientes, lista_de_consultas &
             abb_mostrar_pacientes(abb_pacientes);
             break;
         case 2:
+        {
+            string apellido_a_buscar;
+            int cantidad_pacientes;
 
+            getchar();
+
+            printf("\n\tApellido: ");
+            cargar_string(apellido_a_buscar);
+
+            cantidad_pacientes = cantidad_pacientes_por_apellido(abb_pacientes, apellido_a_buscar);
+
+            printf("\n\tHay %d pacientes de apellido ", cantidad_pacientes);
+            desplegar_string(apellido_a_buscar);
+            printf("\n");
             break;
+        }
         case 3:
 
             break;
