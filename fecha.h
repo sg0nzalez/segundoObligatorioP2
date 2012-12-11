@@ -2,7 +2,7 @@
 #define FECHA_H_INCLUDED
 
 #include<stdio.h>
-#include"boolean.h"
+#include "string.h"
 
 typedef struct {
     int dia;

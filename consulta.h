@@ -2,8 +2,6 @@
 #define CONSULTA_H_INCLUDED
 
 #include "evaluacion.h"
-#include "fecha.h"
-#include "string.h"
 
 typedef struct {
     fecha realizacion;

@@ -1,7 +1,6 @@
 #ifndef ARCHIVOS_H_INCLUDED
 #define ARCHIVOS_H_INCLUDED
 
-#include "archivos.h"
 #include "abb_de_pacientes.h"
 #include "lista_de_consultas.h"
 

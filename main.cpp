@@ -1,5 +1,3 @@
-#include "abb_de_pacientes.h"
-#include "lista_de_consultas.h"
 #include "archivos.h"
 
 void sub_menu_de_consultas(abb_de_pacientes &abb_pacientes, lista_de_consultas &lista_consultas, boolean &cerrar_menu)
