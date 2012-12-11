@@ -44,9 +44,9 @@ void sub_menu_de_pacientes(abb_de_pacientes &abb_pacientes, lista_de_consultas &
     printf("\nOpciones:\n");
     printf("\n\t1)- Lista de todos los pacientes");
     printf("\n\t2)- Buscar Pacientes por apellido");
-    printf("\n\t4)- Cedula paciente con mas consultas");
-    printf("\n\t5)- Pacientes con mayor y menor cantidad de consultas");
-    printf("\n\t6)- Salir");
+    printf("\n\t3)- Cedula paciente con mas consultas");
+    printf("\n\t4)- Pacientes con mayor y menor cantidad de consultas");
+    printf("\n\t5)- Salir");
 
     printf("\n\nIngrese la opcion deseada: ");
     scanf("%d", &opcion_ingresada);
@@ -56,7 +56,15 @@ void sub_menu_de_pacientes(abb_de_pacientes &abb_pacientes, lista_de_consultas &
         case 1:
             printf("\nPacientes: \n\n");
 
-            abb_mostrar_pacientes(abb_pacientes);
+            if (abb_es_vacio(abb_pacientes) == FALSE)
+            {
+                abb_mostrar_pacientes(abb_pacientes);
+            }
+            else
+            {
+                printf("\tNo hay pacientes para mostrar\n");
+            }
+
             break;
         case 2:
         {
@@ -76,15 +84,40 @@ void sub_menu_de_pacientes(abb_de_pacientes &abb_pacientes, lista_de_consultas &
             break;
         }
         case 3:
+        {
+            if (lista_es_vacia(lista_consultas) == FALSE)
+            {
+                long ci_paciente = cedula_paciente_con_mas_consultas(lista_consultas);
 
+                printf("\n\tEl paciente con mas consultas es %ld\n", ci_paciente);
+            }
+            else
+            {
+                printf("\n\tNo hay consultas para buscar\n");
+            }
             break;
+        }
         case 4:
+            if (abb_es_vacio(abb_pacientes) == FALSE)
+            {
+                paciente menor_paciente;
+                paciente mayor_paciente;
+
+                paciente_menor_y_mayor_cedula(abb_pacientes, menor_paciente, mayor_paciente);
+
+                printf("\n\tEl paciente menor es:\n");
+                mostrar_paciente(menor_paciente);
+                printf("\n\tEl paciente mayor es:\n");
+                mostrar_paciente(mayor_paciente);
+                printf("\n");
+            }
+            else
+            {
+                printf("\n\tNo hay pacientes para mostrar\n");
+            }
 
             break;
         case 5:
-
-            break;
-        case 6:
             cerrar_menu = TRUE;
             break;
     }

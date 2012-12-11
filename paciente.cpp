@@ -5,8 +5,14 @@ long darCedula(paciente info)
     return info.cedula;
 }
 
-void dar_apellido(paciente info, string &apellido) {
+void dar_apellido(paciente info, string &apellido)
+{
     copiar_string(apellido, info.apellido);
+}
+
+void dar_nombre(paciente info, string &nombre)
+{
+    copiar_string(nombre, info.nombre);
 }
 
 void ingresar_paciente(paciente &nuevo_paciente)

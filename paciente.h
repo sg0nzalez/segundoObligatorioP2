@@ -15,6 +15,8 @@ long darCedula(paciente info);
 
 void dar_apellido(paciente info, string &apellido);
 
+void dar_nombre(paciente info, string &nombre);
+
 void ingresar_paciente(paciente &nuevo_paciente);
 
 void mostrar_paciente(paciente paciente_a_mostrar);

@@ -133,23 +133,7 @@ int cantidad_consultas_por_evaluacion(lista_de_consultas lista, evaluacion evalu
    return 0;
 }
 
-/*
-int cantidad_consultas_por_cedula(lista_de_consultas lista, long cedula)
-{
-   if (lista != NULL)
-   {
-       if (dar_evaluacion(lista->info) == evaluacion_a_buscar)
-       {
-           return 1 + cantidad_consultas_por_evaluacion(lista->sig, evaluacion_a_buscar);
-       }
-
-       return cantidad_consultas_por_evaluacion(lista->sig, evaluacion_a_buscar);
-   }
-
-   return 0;
-}
-*/
-
+// precondicion no es vacia
 long cedula_paciente_con_mas_consultas(lista_de_consultas lista)
 {
     lista_de_consultas lista_aux = lista;
