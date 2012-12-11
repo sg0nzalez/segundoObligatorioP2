@@ -11,8 +11,6 @@ void dar_apellido(paciente info, string &apellido) {
 
 void ingresar_paciente(paciente &nuevo_paciente)
 {
-    printf("Ingrese un nuevo paciente:\n");
-
     printf("Cedula: ");
     scanf("%ld", &nuevo_paciente.cedula);
 

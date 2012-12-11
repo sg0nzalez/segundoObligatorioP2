@@ -1,8 +1,132 @@
 #include "abb_de_pacientes.h"
 #include "lista_de_consultas.h"
 
+void sub_menu_de_consultas(abb_de_pacientes &abb_pacientes, lista_de_consultas &lista_consultas, boolean &cerrar_menu)
+{
+    int opcion_ingresada;
+
+    printf("\nOpciones:\n");
+    printf("\n\t1)- Consultas mayores a una fecha");
+    printf("\n\t2)- Cantidad consultas de cada tipo");
+    printf("\n\t3)- Salir");
+
+    printf("\n\nIngrese la opcion deseada: ");
+    scanf("%d", &opcion_ingresada);
+
+    switch (opcion_ingresada)
+    {
+        case 1:
+
+            break;
+        case 2:
+
+            break;
+        case 3:
+            cerrar_menu = TRUE;
+            break;
+    }
+}
+
+void sub_menu_de_pacientes(abb_de_pacientes &abb_pacientes, lista_de_consultas &lista_consultas, boolean &cerrar_menu)
+{
+    int opcion_ingresada;
+
+    printf("\nOpciones:\n");
+    printf("\n\t1)- Lista de todos los pacientes");
+    printf("\n\t2)- Buscar Pacientes por apellido");
+    printf("\n\t4)- Cedula paciente con mas consultas");
+    printf("\n\t5)- Pacientes con mayor y menor cantidad de consultas");
+    printf("\n\t6)- Salir");
+
+    printf("\n\nIngrese la opcion deseada: ");
+    scanf("%d", &opcion_ingresada);
+
+    switch (opcion_ingresada)
+    {
+        case 1:
+
+            break;
+        case 2:
+
+            break;
+        case 3:
+
+            break;
+        case 4:
+
+            break;
+        case 5:
+
+            break;
+        case 6:
+            cerrar_menu = TRUE;
+            break;
+    }
+}
+
+void menu_principal(abb_de_pacientes &abb_pacientes, lista_de_consultas &lista_consultas, boolean &cerrar_menu)
+{
+    int opcion_ingresada;
+
+    printf("\nOpciones:\n");
+    printf("\n\t1)- Ingrese un Paciente");
+    printf("\n\t2)- Ingrese una Consulta");
+    printf("\n\t3)- SubMenu de Consultas");
+    printf("\n\t4)- SubMenu de Pacientes");
+    printf("\n\t5)- Salir");
+
+    printf("\n\nIngrese la opcion deseada: ");
+    scanf("%d", &opcion_ingresada);
+
+    switch (opcion_ingresada)
+    {
+        case 1:
+            paciente nuevo_paciente;
+
+            ingresar_paciente(nuevo_paciente);
+
+            abb_insertar_paciente(abb_pacientes, nuevo_paciente);
+            break;
+        case 2:
+            consulta nueva_consulta;
+
+            ingresar_consulta(nueva_consulta);
+
+            lista_insertar_consulta(lista_consultas, nueva_consulta);
+            break;
+        case 3:
+            while (cerrar_menu == FALSE)
+                sub_menu_de_consultas(abb_pacientes, lista_consultas, cerrar_menu);
+
+            cerrar_menu = FALSE;
+            break;
+        case 4:
+            while (cerrar_menu == FALSE)
+                sub_menu_de_pacientes(abb_pacientes, lista_consultas, cerrar_menu);
+
+            cerrar_menu = FALSE;
+            break;
+        case 5:
+            cerrar_menu = TRUE;
+            break;
+    }
+}
+
 int main()
 {
+    // FALTA CARGAR LOS DATOS DE UN ARCHIVO PREVIAMENTE CARGADO
+    abb_de_pacientes abb_pacientes = NULL;
+    lista_de_consultas lista_consultas = NULL;
+
+    boolean cerrar_menu = FALSE;
+
+    while (cerrar_menu == FALSE)
+        menu_principal(abb_pacientes, lista_consultas, cerrar_menu);
+
+
+
+
+   /*
     abb_de_pacientes abb_pacientes = NULL;
 
     for(int i = 0; i < 1; i++)
