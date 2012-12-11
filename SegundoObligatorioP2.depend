@@ -151,7 +151,7 @@
 1348843534 source:/home/santi/workspace/secondObligatorioP2/boolean.cpp
 	"boolean.h"
 
-1355192336 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/string.cpp
+1355263070 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/string.cpp
 	"string.h"
 
 1355181391 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/string.h
@@ -160,7 +160,7 @@
 1355134435 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/boolean.h
 	<stdio.h>
 
-1355190287 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/consulta.cpp
+1355192713 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/consulta.cpp
 	"consulta.h"
 
 1355134435 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/consulta.h
@@ -181,15 +181,16 @@
 1355190341 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/fecha.cpp
 	"fecha.h"
 
-1355190248 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/lista_de_consultas.cpp
+1355192713 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/lista_de_consultas.cpp
 	"lista_de_consultas.h"
 
 1355189982 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/lista_de_consultas.h
 	"consulta.h"
 
-1355192305 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/main.cpp
+1355221979 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/main.cpp
 	"abb_de_pacientes.h"
 	"lista_de_consultas.h"
+	"archivos.h"
 
 1355180274 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/abb_de_pacientes.h
 	"paciente.h"
@@ -200,13 +201,18 @@
 1355189581 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/paciente.cpp
 	"paciente.h"
 
-1355191412 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/abb_de_pacientes.cpp
+1355192768 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/abb_de_pacientes.cpp
 	"abb_de_pacientes.h"
 
 1355197824 source:/home/santi/workspace/secondObligatorioP2/archivos.cpp
 	"archivos.h"
 
 1355196751 /home/santi/workspace/secondObligatorioP2/archivos.h
+	"archivos.h"
+	"abb_de_pacientes.h"
+	"lista_de_consultas.h"
+
+1355221979 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/archivos.h
 	"archivos.h"
 	"abb_de_pacientes.h"
 	"lista_de_consultas.h"

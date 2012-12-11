@@ -5,28 +5,33 @@ void cargar_string(string &s)
     crear_string(s);
 
     string aux = new char[LARGO_STRING];
-    int i=0;
+    int i = 0;
     char c;
-    scanf("%c",&c);
 
-    while (((c!='\n') && (i<LARGO_STRING)))
+    scanf("%c", &c);
+
+    while (c != '\n' && i < LARGO_STRING)
     {
-        aux[i]=c;
+        aux[i] = c;
+        scanf("%c", &c);
+
         i++;
-        scanf("%c",&c);
     }
 
-    aux[i]='\0';
+    aux[i] = '\0';
+
     copiar_string(s, aux);
     destruir_string(aux);
 }
 
 void desplegar_string(string texto)
 {
-    int i=0;
-    while(texto[i]!='\0')
+    int i = 0;
+
+    while (texto[i] != '\0')
     {
-        printf("%c",texto[i]);
+        printf("%c", texto[i]);
+
         i++;
     }
 }

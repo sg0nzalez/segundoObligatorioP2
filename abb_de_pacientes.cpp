@@ -109,6 +109,8 @@ int cantidad_pacientes_por_apellido(abb_de_pacientes arbol, string apellido)
     else
     {
         string apellido_info;
+        crear_string(apellido_info);
+
         dar_apellido(arbol->info, apellido_info);
 
         if (comparar_2_strings(apellido_info, apellido))
