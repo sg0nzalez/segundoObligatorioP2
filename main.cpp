@@ -27,6 +27,7 @@ void sub_menu_de_consultas(abb_de_pacientes &abb_pacientes, lista_de_consultas &
             break;
         }
         case 2:
+            lista_mostrar_consultas(lista_consultas);
             cantidad_consultas_de_cada_tipo(lista_consultas);
             break;
         case 3:

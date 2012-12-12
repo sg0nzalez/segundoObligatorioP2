@@ -6,7 +6,7 @@ boolean existe_archivo(string nomArch)
 
     FILE *f = fopen(nomArch, "rb");
 
-    if(f == NULL)
+    if (f == NULL)
         existeArchivo = FALSE;
 
     fclose(f);
@@ -51,21 +51,29 @@ void levantar_string(string &s, FILE * f)
 void bajar_paciente(paciente p, FILE *f)
 {
     fwrite(&p.cedula, sizeof(long), 1, f);
+
     bajar_string(p.nombre, f);
+
     bajar_string(p.apellido, f);
+
     bajar_string(p.domicilio, f);
+
     fwrite(&p.telefono, sizeof(long), 1, f);
 }
 
 void levantar_paciente(paciente &p, FILE *f)
 {
     fread (&p.cedula, sizeof(long int), 1, f);
+
     crear_string(p.nombre);
-    levantar_string (p.nombre, f);
+    levantar_string(p.nombre, f);
+
     crear_string(p.apellido);
-    levantar_string (p.apellido, f);
+    levantar_string(p.apellido, f);
+
     crear_string(p.domicilio);
-    levantar_string (p.domicilio, f);
+    levantar_string(p.domicilio, f);
+
     fread (&p.telefono, sizeof(long int), 1, f);
 }
 
@@ -74,6 +82,7 @@ void bajar_abb(abb_de_pacientes a)
     FILE *f = fopen(ARCHIVO_PACIENTES, "wb");
 
     bajar_abb_aux(a, f);
+
     fclose(f);
 }
 
@@ -108,7 +117,7 @@ void levantar_abb(abb_de_pacientes &a)
 //
 // PROCEDIMIENTOS RELACIONADOS A LA LISTA DE CONSULTAS
 
-void bajar_fecha(fecha fec,FILE *f)
+void bajar_fecha(fecha fec, FILE *f)
 {
     fwrite(&fec.dia, sizeof(int), 1, f);
     fwrite(&fec.mes, sizeof(int), 1, f);
@@ -142,7 +151,7 @@ void levantar_consulta(consulta &c, FILE *f)
 
     fread(&c.evaluacion_paciente, sizeof(evaluacion), 1, f);
 
-    levantar_fecha(c.realizacion,f);
+    levantar_fecha(c.realizacion, f);
 }
 
 void bajar_lista_consulta(lista_de_consultas l)
@@ -153,6 +162,7 @@ void bajar_lista_consulta(lista_de_consultas l)
     while (lista_aux != NULL)
     {
         bajar_consulta(lista_aux->info, f);
+
         lista_aux = lista_aux->sig;
     }
 
@@ -161,15 +171,18 @@ void bajar_lista_consulta(lista_de_consultas l)
 
 void levantar_lista_consulta(lista_de_consultas &l)
 {
-    FILE * f = fopen (ARCHIVO_CONSULTAS, "rb");
+    FILE *f = fopen(ARCHIVO_CONSULTAS, "rb");
+
     consulta buffer;
     levantar_consulta(buffer, f);
 
     while (!feof(f))
     {
-        lista_insertar_consulta(l,buffer);
-        levantar_consulta(l->info, f);
+        lista_insertar_consulta(l, buffer);
+
+        levantar_consulta(buffer, f);
     }
 
     fclose(f);
 }
+
