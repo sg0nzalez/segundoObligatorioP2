@@ -1,6 +1,8 @@
 #ifndef EVALUACION_H_INCLUDED
 #define EVALUACION_H_INCLUDED
 
+#include "fecha.h"
+
 typedef enum { SALUDABLE, EN_TRATAMIENTO, NECESITA_PROTESIS } evaluacion;
 
 void cargar_evaluacion(evaluacion &evaluacion_a_cargar);
