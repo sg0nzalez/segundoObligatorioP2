@@ -53,6 +53,7 @@ void sub_menu_de_pacientes(abb_de_pacientes &abb_pacientes, lista_de_consultas &
     switch (opcion_ingresada)
     {
         case 1:
+        {
             printf("\nPacientes: \n\n");
 
             if (abb_es_vacio(abb_pacientes) == FALSE)
@@ -65,6 +66,7 @@ void sub_menu_de_pacientes(abb_de_pacientes &abb_pacientes, lista_de_consultas &
             }
 
             break;
+        }
         case 2:
         {
             string apellido_a_buscar;
@@ -180,27 +182,18 @@ void menu_principal(abb_de_pacientes &abb_pacientes, lista_de_consultas &lista_c
 
 int main()
 {
-    printf("UNO");
     abb_de_pacientes abb_pacientes = NULL;
     lista_de_consultas lista_consultas = NULL;
 
     if (existe_archivo(ARCHIVO_PACIENTES) == FALSE)
         bajar_abb(abb_pacientes);
 
-    printf("DOS");
-
     if (existe_archivo(ARCHIVO_CONSULTAS) == FALSE)
         bajar_lista_consulta(lista_consultas);
 
-    printf("TRES");
-
     levantar_abb(abb_pacientes);
 
-    printf("CUATRO");
-
     levantar_lista_consulta(lista_consultas);
-
-    printf("CINCO");
 
     boolean cerrar_menu = FALSE;
 

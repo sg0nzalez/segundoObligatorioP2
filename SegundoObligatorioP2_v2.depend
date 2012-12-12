@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1355263070 source:/Users/sandant/Desktop/SegundoObligatorioP2_v2/string.cpp
+	"string.h"
+
+1355181391 /Users/sandant/Desktop/SegundoObligatorioP2_v2/string.h
+	"boolean.h"
+
+1355134435 /Users/sandant/Desktop/SegundoObligatorioP2_v2/boolean.h
+	<stdio.h>
+
+1355315493 source:/Users/sandant/Desktop/SegundoObligatorioP2_v2/archivos.cpp
+	"archivos.h"
+
+1355315290 /Users/sandant/Desktop/SegundoObligatorioP2_v2/archivos.h
+	"abb_de_pacientes.h"
+	"lista_de_consultas.h"
+
+1355180274 /Users/sandant/Desktop/SegundoObligatorioP2_v2/abb_de_pacientes.h
+	"paciente.h"
+
+1355265143 /Users/sandant/Desktop/SegundoObligatorioP2_v2/paciente.h
+	"string.h"
+
+1355189982 /Users/sandant/Desktop/SegundoObligatorioP2_v2/lista_de_consultas.h
+	"consulta.h"
+
+1355271214 /Users/sandant/Desktop/SegundoObligatorioP2_v2/consulta.h
+	"evaluacion.h"
+
+1355271214 /Users/sandant/Desktop/SegundoObligatorioP2_v2/evaluacion.h
+	"fecha.h"
+
+1355271214 /Users/sandant/Desktop/SegundoObligatorioP2_v2/fecha.h
+	<stdio.h>
+	"string.h"
+
+1355134435 source:/Users/sandant/Desktop/SegundoObligatorioP2_v2/boolean.cpp
+	"boolean.h"
+
+1355192713 source:/Users/sandant/Desktop/SegundoObligatorioP2_v2/consulta.cpp
+	"consulta.h"
+
+1355190429 source:/Users/sandant/Desktop/SegundoObligatorioP2_v2/evaluacion.cpp
+	<stdio.h>
+	"evaluacion.h"
+
+1355190341 source:/Users/sandant/Desktop/SegundoObligatorioP2_v2/fecha.cpp
+	"fecha.h"
+
+1355273232 source:/Users/sandant/Desktop/SegundoObligatorioP2_v2/lista_de_consultas.cpp
+	"lista_de_consultas.h"
+
+1355315670 source:/Users/sandant/Desktop/SegundoObligatorioP2_v2/main.cpp
+	"archivos.h"
+
+1355265165 source:/Users/sandant/Desktop/SegundoObligatorioP2_v2/paciente.cpp
+	"paciente.h"
+
+1355274823 source:/Users/sandant/Desktop/SegundoObligatorioP2_v2/abb_de_pacientes.cpp
+	"abb_de_pacientes.h"
+

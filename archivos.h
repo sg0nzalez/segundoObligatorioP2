@@ -4,11 +4,11 @@
 #include "abb_de_pacientes.h"
 #include "lista_de_consultas.h"
 
-//const string ARCHIVO_PACIENTES = "/Users/sandant/Desktop/pacientes.txt";
-//const string ARCHIVO_CONSULTAS = "/Users/sandant/Desktop/consultas.txt";
+const string ARCHIVO_PACIENTES = "/Users/sandant/Desktop/pacientes.txt";
+const string ARCHIVO_CONSULTAS = "/Users/sandant/Desktop/consultas.txt";
 
-const string ARCHIVO_PACIENTES = "/home/santi/Desktop/pacientes.txt";
-const string ARCHIVO_CONSULTAS = "/home/santi/Desktop/consultas.txt";
+//const string ARCHIVO_PACIENTES = "d:\\pacientes.txt";
+//const string ARCHIVO_CONSULTAS = "d:\\consultas.txt";
 
 
 boolean existe_archivo(string nomArch);

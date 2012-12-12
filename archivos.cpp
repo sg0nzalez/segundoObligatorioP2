@@ -117,20 +117,6 @@ void levantar_abb(abb_de_pacientes &a)
 //
 // PROCEDIMIENTOS RELACIONADOS A LA LISTA DE CONSULTAS
 
-void bajar_fecha(fecha fec, FILE *f)
-{
-    fwrite(&fec.dia, sizeof(int), 1, f);
-    fwrite(&fec.mes, sizeof(int), 1, f);
-    fwrite(&fec.anio, sizeof(int), 1, f);
-}
-
-void levantar_fecha(fecha fec, FILE *f)
-{
-    fread(&fec.dia, sizeof(int), 1, f);
-    fread(&fec.mes, sizeof(int), 1, f);
-    fread(&fec.anio, sizeof(int), 1, f);
-}
-
 void bajar_consulta(consulta c, FILE *f)
 {
     bajar_string(c.descripcion, f);
@@ -139,7 +125,7 @@ void bajar_consulta(consulta c, FILE *f)
 
     fwrite(&c.evaluacion_paciente, sizeof(evaluacion), 1, f);
 
-    bajar_fecha(c.realizacion, f);
+    fwrite(&c.realizacion, sizeof(fecha), 1, f);
 }
 
 void levantar_consulta(consulta &c, FILE *f)
@@ -151,7 +137,7 @@ void levantar_consulta(consulta &c, FILE *f)
 
     fread(&c.evaluacion_paciente, sizeof(evaluacion), 1, f);
 
-    levantar_fecha(c.realizacion, f);
+    fread(&c.realizacion, sizeof(fecha), 1, f);
 }
 
 void bajar_lista_consulta(lista_de_consultas l)
