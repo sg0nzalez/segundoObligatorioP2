@@ -170,7 +170,7 @@
 
 1355134435 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/evaluacion.h
 
-1355134435 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/fecha.h
+1355271104 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/fecha.h
 	<stdio.h>
 	"boolean.h"
 
@@ -187,7 +187,7 @@
 1355189982 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/lista_de_consultas.h
 	"consulta.h"
 
-1355265461 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/main.cpp
+1355270712 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/main.cpp
 	"abb_de_pacientes.h"
 	"lista_de_consultas.h"
 	"archivos.h"
@@ -212,8 +212,11 @@
 	"abb_de_pacientes.h"
 	"lista_de_consultas.h"
 
-1355221979 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/archivos.h
+1355270976 /Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/archivos.h
 	"archivos.h"
 	"abb_de_pacientes.h"
 	"lista_de_consultas.h"
+
+1355270328 source:/Users/sandant/Documents/Projects/CProjects/segundoObligatorioP2/archivos.cpp
+	"archivos.h"
 

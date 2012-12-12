@@ -5,64 +5,37 @@
 #include "abb_de_pacientes.h"
 #include "lista_de_consultas.h"
 
-//controlar que exista
-boolean Existe_archivo (string nomArch);
+const string ARCHIVO_PACIENTES = "/Users/sandant/Desktop/pacientes.txt";
+const string ARCHIVO_CONSULTAS = "/Users/sandant/Desktop/consultas.txt";
 
-//Escribir string en Archivo
-void Bajar_String (string s, FILE * f);
+boolean existe_archivo(string nomArch);
 
-//Cargar string en Archivo
-void Levantar_String (string &s, FILE * f);
+void bajar_string(string s, FILE * f);
 
-//Escribe paciente en Archivo
-void Bajar_Paciente (paciente p, FILE * f );
+void levantar_string(string &s, FILE * f);
 
-//Lee paciente del Archivo
-void Levantar_Paciente (paciente &p, FILE * f );
+// PROCEDIMIENTOS RELACIONADOS AL ABB DE PACIENTES
+void bajar_paciente(paciente p, FILE *f);
 
-//Abre el archivo y llama a la funcion que Baja el ABB a un archivo y luego lo cierra
-void Bajar_ABB (abb_de_pacientes a);
+void levantar_paciente(paciente &p, FILE * f );
 
-//Baja el archivo
-void Bajar_ABB_Aux (abb_de_pacientes a, FILE * f);
+void bajar_abb(abb_de_pacientes a);
 
-void Levantar_ABB (abb_de_pacientes &a);
+void bajar_abb_aux(abb_de_pacientes a, FILE * f);
 
-// escribe fecha en archivo
+void levantar_abb(abb_de_pacientes &a);
+
+// PROCEDIMIENTOS RELACIONADOS A LA LISTA DE CONSULTAS
 void bajar_fecha(fecha fe,FILE *f);
 
-// lee fecha en un archivo
 void levantar_fecha(fecha fe,FILE *f);
 
-//Escribe consulta en Archivo
-void Bajar_consulta (consulta c, FILE * f );
+void bajar_consulta(consulta c, FILE * f );
 
-//Leeconsulta del Archivo
-void Levantar_consulta (consulta &c, FILE * f );
+void levantar_consulta(consulta &c, FILE * f );
 
-/*//Baja el archivo
-void Bajar_lista_consula_Aux (lista_consulta l, FILE * f)
-{
+void bajar_lista_consulta(lista_de_consultas l);
 
-
-
-if (l != NULL)
-{
-Bajar_consulta(l->info_consulta,f);
-Bajar_lista_consula_Aux(l->sig_consulta,f);
-}
-}
-//Abre el archivo y llama a la funcion que Baja la lista de consultas a un archivo y luego lo cierra
-void Bajar_lista_consulta (lista_consulta l)
-{
-FILE * f = fopen ("d:\\consulta.txt","wb");
-Bajar_lista_consula_Aux(l, f);
-fclose(f);
-}*/
-//Abre el archivo y llama a la funcion que Baja la lista de consultas a un archivo y luego lo cierra
-void Bajar_lista_consulta (lista_de_consultas l);
-
-// levantar archivo lista de consultas
-void Levantar_lista_consulta (lista_de_consultas &l);
+void levantar_lista_consulta(lista_de_consultas &l);
 
 #endif // ARCHIVOS_H_INCLUDED
