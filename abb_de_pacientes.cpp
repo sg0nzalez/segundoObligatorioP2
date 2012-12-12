@@ -7,23 +7,30 @@ void abb_crear(abb_de_pacientes &arbol)
 
 void abb_insertar_paciente(abb_de_pacientes &arbol, paciente info)
 {
-    if (arbol == NULL)
-    {
-        arbol = new nodo_paciente;
-        arbol->info = info;
-        arbol->hIzq = NULL;
-        arbol->hDer = NULL;
-    }
-    else
-    {
-        if (darCedula(info) < darCedula(arbol->info))
+    boolean existe_paciente;
+    existe_paciente = abb_existe_paciente(arbol, darCedula(info));
+
+    if(existe_paciente==FALSE){
+        if (arbol == NULL)
         {
-            abb_insertar_paciente(arbol->hIzq, info);
+            arbol = new nodo_paciente;
+            arbol->info = info;
+            arbol->hIzq = NULL;
+            arbol->hDer = NULL;
         }
         else
         {
-            abb_insertar_paciente(arbol->hDer, info);
+            if (darCedula(info) < darCedula(arbol->info))
+            {
+                abb_insertar_paciente(arbol->hIzq, info);
+            }
+            else
+            {
+                abb_insertar_paciente(arbol->hDer, info);
+            }
         }
+    } else {
+            printf("\nEL PACIENTE NO FUE INGRESADO PORQUE YA EXISTE.\n");
     }
 }
 
@@ -65,26 +72,32 @@ boolean abb_es_vacio(abb_de_pacientes arbol)
 
 boolean abb_existe_paciente(abb_de_pacientes arbol, long cedula)
 {
-    if (cedula == darCedula(arbol->info))
-    {
-        return TRUE;
-    }
-    else
-    {
-        if (cedula < darCedula(arbol->info))
+    boolean es_vacio = abb_es_vacio(arbol);
+
+    if(es_vacio==FALSE){
+        if (cedula == darCedula(arbol->info))
         {
-            return abb_existe_paciente(arbol->hIzq, cedula);
+            return TRUE;
         }
         else
         {
-            return abb_existe_paciente(arbol->hDer, cedula);
+            if (cedula < darCedula(arbol->info))
+            {
+                return abb_existe_paciente(arbol->hIzq, cedula);
+            }
+            else
+            {
+                return abb_existe_paciente(arbol->hDer, cedula);
+            }
         }
-    }
 
-    return FALSE;
+        return FALSE;
+    } else {
+        return FALSE;
+    }
 }
 
-void paciente_menor_y_mayor_cedula(abb_de_pacientes arbol, paciente &paciente_menor_cedula, paciente &paciente_mayor_cedula){
+void paciente_menor_y_mayor_cedula(abb_de_pacientes arbol,   paciente &paciente_menor_cedula, paciente &paciente_mayor_cedula){
 
     abb_de_pacientes arbol_aux = arbol;
 

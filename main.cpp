@@ -180,20 +180,132 @@ void menu_principal(abb_de_pacientes &abb_pacientes, lista_de_consultas &lista_c
 
 int main()
 {
+    printf("UNO");
     abb_de_pacientes abb_pacientes = NULL;
     lista_de_consultas lista_consultas = NULL;
 
     if (existe_archivo(ARCHIVO_PACIENTES) == FALSE)
         bajar_abb(abb_pacientes);
 
+    printf("DOS");
+
     if (existe_archivo(ARCHIVO_CONSULTAS) == FALSE)
         bajar_lista_consulta(lista_consultas);
 
+    printf("TRES");
+
     levantar_abb(abb_pacientes);
+
+    printf("CUATRO");
+
     levantar_lista_consulta(lista_consultas);
+
+    printf("CINCO");
 
     boolean cerrar_menu = FALSE;
 
     while (cerrar_menu == FALSE)
         menu_principal(abb_pacientes, lista_consultas, cerrar_menu);
+
+/*
+//USADO PARA TESTING
+
+    //USADO PARA PROBAR EL INGRESO Y EL LISTADO DE PACIENTES
+    abb_de_pacientes abb_pacientes = NULL;
+
+    for(int i = 0; i < 1; i++)
+    {
+        paciente nuevo_paciente;
+
+        ingresar_paciente(nuevo_paciente);
+
+        abb_insertar_paciente(abb_pacientes, nuevo_paciente);
+    }
+
+    printf("Mostrar todos los pacientes ordenados: \n\n");
+    abb_mostrar_pacientes(abb_pacientes);
+
+    //USADO PARA PROBAR EL INGRESO DE CONSULTAS
+    lista_de_consultas lista_consultas = NULL;
+
+    for(int i = 0; i < 3; i++)
+    {
+        consulta nueva_consulta;
+
+        ingresar_consulta(nueva_consulta);
+
+        lista_insertar_consulta(lista_consultas, nueva_consulta);
+    }
+
+    //USADO PARA CORROBAR EL PACIENTE CON MAYOR CONSULTAS
+    printf("%ld", cedula_paciente_con_mas_consultas(lista_consultas));
+
+    long cedula;
+
+    //USADO PARA MOSTRAR LAS CONSULTAS POR CEDULA
+    printf("Ingrese una cedula para mostrar las consultas: ");
+    scanf("%ld", &cedula);
+
+    consultas_por_cedula(lista_consultas, cedula);
+
+    //USADO PARA PROBAR EL MOSTRAR TODAS LAS CONSULTAS
+    printf("Mostrar todas las consultas: \n\n");
+    lista_mostrar_consultas(lista_consultas);
+
+    //USADO PROBAR EL MOSTRAR TODAS LAS CONSULTAS POR EVALUACION
+    printf("Consultas por evaluacion: \n");
+    consultas_por_evaluacion(lista_consultas, SALUDABLE);
+
+    //USADO PARA PROBAR EL CARGAR FECHA
+    fecha fec_pertenece;
+    fecha fec_inicio;
+    fecha fec_fin;
+    fecha fec_despues;
+
+
+    printf("Ingrese la fecha a buscar: \n");
+    cargar_fecha(fec_pertenece);
+
+    printf("Ingrese la fecha de inicio: \n");
+    cargar_fecha(fec_inicio);
+
+    printf("Ingrese la fecha de fin: \n");
+    cargar_fecha(fec_fin);
+
+    //USADO PARA PROBAR SI UNA FECHA PERTENECE A UN RANGO DE FECHAS
+    boolean pertenece = fecha_pertenece_al_rango(fec_pertenece, fec_inicio, fec_fin);
+
+    if(pertenece){
+        printf("PERTENECE");
+    } else {
+        printf("NO PERTENECE");
+    }
+
+    //USADO PARA PROBAR EL MOSTRAR LAS CONSULTAS ENTRE 2 FECHAS
+    printf("\nConsultas realizadas en el periodo ");
+    printf("del ");
+    mostrar_fecha(fec_inicio);
+    printf(" al ");
+    mostrar_fecha(fec_fin);
+    printf("\n\n");
+    mostrar_consultas_entre_2_fechas(lista_consultas, fec_inicio, fec_fin);
+
+    //USADO PARA PROBAR LA CUENTA DE CONSULTAS POSTERIORES A UNA FECHA
+    printf("Ingrese la fecha para contar las consultas posteriores a la misma: \n");
+    cargar_fecha(fec_despues);
+    int contador_consultas;
+    contador_consultas = contar_consultas_despues_de_fecha(lista_consultas, fec_despues);
+    printf("Cantidad de consultas = %d", contador_consultas);
+
+    //USADO PARA PROBAR QUE LOS PACIENTES CON MENOR Y MAYOR CEDULA SON DEVEULTOS CORRECTAMENTE
+    paciente paciente_menor_cedula;
+    paciente paciente_mayor_cedula;
+
+    paciente_menor_y_mayor_cedula(abb_pacientes, paciente_menor_cedula, paciente_mayor_cedula);
+
+    printf("\nPaciente menor cedula:\n");
+    mostrar_paciente(paciente_menor_cedula);
+    printf("\nPaciente mayor cedula:\n");
+    mostrar_paciente(paciente_mayor_cedula);
+*/
 }
